@@ -1,1 +1,2 @@
-python src/runners/train_swimmer.py --config configs/swimmer_ppo.yaml
+#!/bin/bash
+python src/train/run_train.py
