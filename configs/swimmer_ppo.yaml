@@ -1,0 +1,24 @@
+environment:
+  name: SwimmerEnv
+  import: src.envs.swimmer_env
+
+agent:
+  name: PPO
+  import: tonic.torch.agents.ppo
+  config:
+    batch_size: 64
+    updates_per_batch: 4
+    entropy_coefficient: 0.01
+    clip_ratio: 0.2
+    learning_rate: 3e-4
+    discount: 0.99
+    lambda_: 0.95
+    normalize_advantages: true
+    model:
+      name: SwimmerModule
+      import: src.models.swimmer_module
+
+train_steps: 10000
+
+logdir: logs/test_run
+log_formats: ["stdout", "log", "csv"]

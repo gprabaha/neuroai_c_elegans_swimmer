@@ -1,0 +1,1 @@
+python src/runners/train_swimmer.py --config configs/swimmer_ppo.yaml

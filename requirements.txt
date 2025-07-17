@@ -1,0 +1,8 @@
+dm-control
+torch
+numpy
+matplotlib
+tqdm
+pyyaml
+acme
+
